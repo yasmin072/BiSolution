@@ -33,5 +33,9 @@ public class ProductMdxQueries
                 3        
             ) ON ROWS
         FROM [CubeExamenFinal]";
+
+    public static string GetTotalProduct = @"   SELECT  
+       [Measures].[Product ID Distinct Count] as [nbProduct] ON COLUMNS
+       FROM [CubeExamenFinal]";
 }
 

@@ -43,5 +43,14 @@ public class ProductAnalysisService : IProductAnalysisService
         };
         return await _cubeRepository.ExecuteMdxQueryAsync<Top3ProdTotalLine>(ProductMdxQueries.GetTop3ProdTotalLine, columnMapping);
     }
+
+    public async Task<List<ProductCountDto>> GetProductCounts()
+    {
+        var columnMapping = new Dictionary<string, string>
+        {
+            { "ProductCount", "[Measures].[Product ID Distinct Count]" }
+        };
+        return await _cubeRepository.ExecuteMdxQueryAsync<ProductCountDto>(ProductMdxQueries.GetTotalProduct, columnMapping);
+    }
     
 }

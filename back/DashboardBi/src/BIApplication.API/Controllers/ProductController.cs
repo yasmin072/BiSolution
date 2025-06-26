@@ -34,4 +34,10 @@ public class ProductController : ControllerBase
         var result = await _productAnalysisService.GetTop3ProdTotalLine();
         return Ok(result);
     }
+    [HttpGet("totalProduct")]
+    public async Task<IActionResult> GetProductCounts()
+    {
+        var result = await _productAnalysisService.GetProductCounts();
+        return Ok(result);
+    }
 }

@@ -13,3 +13,4 @@ C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Infrastructure\obj\Debug\net8
 C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Infrastructure\obj\Debug\net8.0\refint\BIApplication.Infrastructure.dll
 C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Infrastructure\obj\Debug\net8.0\BIApplication.Infrastructure.pdb
 C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Infrastructure\obj\Debug\net8.0\ref\BIApplication.Infrastructure.dll
+C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Infrastructure\obj\Debug\net8.0\BIApplication.Infrastructure.sourcelink.json

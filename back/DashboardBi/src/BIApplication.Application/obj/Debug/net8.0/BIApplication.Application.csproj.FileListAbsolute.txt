@@ -15,3 +15,4 @@ C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Application\obj\Debug\net8.0\
 C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Application\obj\Debug\net8.0\refint\BIApplication.Application.dll
 C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Application\obj\Debug\net8.0\BIApplication.Application.pdb
 C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Application\obj\Debug\net8.0\ref\BIApplication.Application.dll
+C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Application\obj\Debug\net8.0\BIApplication.Application.sourcelink.json

@@ -134,3 +134,4 @@ C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.API\obj\Debug\net8.0\refint\B
 C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.API\obj\Debug\net8.0\BIApplication.API.pdb
 C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.API\obj\Debug\net8.0\BIApplication.API.genruntimeconfig.cache
 C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.API\obj\Debug\net8.0\ref\BIApplication.API.dll
+C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.API\obj\Debug\net8.0\BIApplication.API.sourcelink.json

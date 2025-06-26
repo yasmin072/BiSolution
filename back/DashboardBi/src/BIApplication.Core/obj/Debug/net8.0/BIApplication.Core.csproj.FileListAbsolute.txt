@@ -9,3 +9,4 @@ C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Core\obj\Debug\net8.0\BIAppli
 C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Core\obj\Debug\net8.0\refint\BIApplication.Core.dll
 C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Core\obj\Debug\net8.0\BIApplication.Core.pdb
 C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Core\obj\Debug\net8.0\ref\BIApplication.Core.dll
+C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Core\obj\Debug\net8.0\BIApplication.Core.sourcelink.json

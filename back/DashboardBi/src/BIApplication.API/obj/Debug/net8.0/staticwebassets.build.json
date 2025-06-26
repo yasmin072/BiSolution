@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "v3RIhCxGBiwjqlfJDoZJzXMVcITMmNEeiGK/qjJmo2U=",
+  "Source": "BIApplication.API",
+  "BasePath": "_content/BIApplication.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

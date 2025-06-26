@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="configurations\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\BIApplication.Core\BIApplication.Core.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AnalysisServices.AdomdClient" Version="19.98.0.3" />
+    </ItemGroup>
+
+</Project>

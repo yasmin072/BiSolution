@@ -1,0 +1,17 @@
+C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Application\bin\Debug\net8.0\BIApplication.Application.deps.json
+C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Application\bin\Debug\net8.0\BIApplication.Application.dll
+C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Application\bin\Debug\net8.0\BIApplication.Application.pdb
+C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Application\bin\Debug\net8.0\BIApplication.Core.dll
+C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Application\bin\Debug\net8.0\BIApplication.Infrastructure.dll
+C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Application\bin\Debug\net8.0\BIApplication.Core.pdb
+C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Application\bin\Debug\net8.0\BIApplication.Infrastructure.pdb
+C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Application\obj\Debug\net8.0\BIApplication.Application.csproj.AssemblyReference.cache
+C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Application\obj\Debug\net8.0\BIApplication.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Application\obj\Debug\net8.0\BIApplication.Application.AssemblyInfoInputs.cache
+C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Application\obj\Debug\net8.0\BIApplication.Application.AssemblyInfo.cs
+C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Application\obj\Debug\net8.0\BIApplication.Application.csproj.CoreCompileInputs.cache
+C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Application\obj\Debug\net8.0\BIApplic.B6B78A77.Up2Date
+C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Application\obj\Debug\net8.0\BIApplication.Application.dll
+C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Application\obj\Debug\net8.0\refint\BIApplication.Application.dll
+C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Application\obj\Debug\net8.0\BIApplication.Application.pdb
+C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Application\obj\Debug\net8.0\ref\BIApplication.Application.dll

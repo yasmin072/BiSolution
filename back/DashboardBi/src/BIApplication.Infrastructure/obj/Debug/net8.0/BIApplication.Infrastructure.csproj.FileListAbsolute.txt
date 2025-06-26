@@ -1,0 +1,15 @@
+C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Infrastructure\obj\Debug\net8.0\BIApplication.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Infrastructure\obj\Debug\net8.0\BIApplication.Infrastructure.AssemblyInfoInputs.cache
+C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Infrastructure\obj\Debug\net8.0\BIApplication.Infrastructure.AssemblyInfo.cs
+C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Infrastructure\obj\Debug\net8.0\BIApplication.Infrastructure.csproj.CoreCompileInputs.cache
+C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Infrastructure\bin\Debug\net8.0\BIApplication.Infrastructure.deps.json
+C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Infrastructure\bin\Debug\net8.0\BIApplication.Infrastructure.dll
+C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Infrastructure\bin\Debug\net8.0\BIApplication.Infrastructure.pdb
+C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Infrastructure\bin\Debug\net8.0\BIApplication.Core.dll
+C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Infrastructure\bin\Debug\net8.0\BIApplication.Core.pdb
+C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Infrastructure\obj\Debug\net8.0\BIApplication.Infrastructure.csproj.AssemblyReference.cache
+C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Infrastructure\obj\Debug\net8.0\BIApplic.47C8D796.Up2Date
+C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Infrastructure\obj\Debug\net8.0\BIApplication.Infrastructure.dll
+C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Infrastructure\obj\Debug\net8.0\refint\BIApplication.Infrastructure.dll
+C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Infrastructure\obj\Debug\net8.0\BIApplication.Infrastructure.pdb
+C:\2eme\PFA\App\back\DashboardBi\src\BIApplication.Infrastructure\obj\Debug\net8.0\ref\BIApplication.Infrastructure.dll

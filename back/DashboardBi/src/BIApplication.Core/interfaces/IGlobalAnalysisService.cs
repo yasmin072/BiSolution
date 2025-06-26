@@ -1,0 +1,11 @@
+using BIApplication.Core.models.product;
+
+namespace BIApplication.Core.interfaces;
+
+public interface IGlobalAnalysisService
+{
+  //  public async Task<List<BikeCategProductsDto>> GetSalesByBikesAsync();
+
+  Task<List<BikeCategProductsDto>> GetSalesByBikesAsync(); 
+  //Task<List>GetBikesAsync();
+}

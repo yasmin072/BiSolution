@@ -32,8 +32,6 @@ public async Task<List<T>> ExecuteMdxQueryAsync<T>(string mdxQuery, Dictionary<s
             Console.WriteLine("Colonnes disponibles 22222 :");
             for (int i = 0; i < reader.FieldCount; i++)
             {
-                Console.WriteLine($"Value at [0]: {reader[0]}");
-
                 Console.WriteLine($"Colonne {i}: {reader.GetName(i)}");
                 string columnName = reader.GetName(i);
                 foreach (var mapping in columnMappings)
@@ -55,7 +53,27 @@ public async Task<List<T>> ExecuteMdxQueryAsync<T>(string mdxQuery, Dictionary<s
                             prop.SetValue(obj, Convert.ToDecimal(reader[i]));
                         }
                     }
-                    else if (typeof(T).GetProperty("LineTotalSumsByYear")?.PropertyType == typeof(Dictionary<string, decimal>)
+                    // Détection générique des colonnes dynamiques par année
+                    var dictProp = typeof(T).GetProperties()
+                        .FirstOrDefault(p => p.PropertyType == typeof(Dictionary<string, decimal>));
+
+                    if (dictProp != null && columnName.Contains("Year") && columnName.Contains("[Measures].["))
+                    {
+                        var dict = (Dictionary<string, decimal>)dictProp.GetValue(obj) ?? new();
+
+                        string yearKey = "Unknown";
+                        if (columnName.Contains("Year].&["))
+                            yearKey = columnName.Split("Year].&[")[1].Split(']')[0];
+                        else if (columnName.Contains("Year].[All]"))
+                            yearKey = "All";
+
+                        if (!reader.IsDBNull(i))
+                            dict[yearKey] = Convert.ToDecimal(reader[i]);
+
+                        dictProp.SetValue(obj, dict);
+                    }
+
+                    /*else if (typeof(T).GetProperty("LineTotalSumsByYear")?.PropertyType == typeof(Dictionary<string, decimal>)
                              && columnName.StartsWith("[Measures].[Line Total]"))
                     {
                         var dictProp = typeof(T).GetProperty("LineTotalSumsByYear");
@@ -71,7 +89,7 @@ public async Task<List<T>> ExecuteMdxQueryAsync<T>(string mdxQuery, Dictionary<s
                             dict[yearKey] = Convert.ToDecimal(reader[i]);
 
                         dictProp?.SetValue(obj, dict);
-                    }
+                    }*/
                 }
             }
 

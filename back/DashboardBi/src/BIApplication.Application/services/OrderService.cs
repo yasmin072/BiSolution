@@ -34,4 +34,18 @@ public class OrderService : IOrdersService
         };
         return await _cubeRepository.ExecuteMdxQueryAsync<OrderFlagDto>(OrdersMdxQueries.OrderFlagMdx, columnMapping);
     }
+
+    public async Task<List<OrderFlagByTerritory>> GetOrderFlagsByTerritoryAsync()
+    {
+        var columnMapping = new Dictionary<string, string>
+
+        {
+            { "TerritoryName", "[Territory].[Name].[Name].[MEMBER_CAPTION]" },
+            { "OnlineOrderFlag", "[Dim Online Order Flag].[Online Order Flag ID].[Online Order Flag ID].[MEMBER_CAPTION]" }
+
+        };
+        return await _cubeRepository.ExecuteMdxQueryAsync<OrderFlagByTerritory>(OrdersMdxQueries.OrdersFlagByTerritoryY, columnMapping);
+    }
+    
+    
 }

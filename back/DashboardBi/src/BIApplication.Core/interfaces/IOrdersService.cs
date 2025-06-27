@@ -7,4 +7,5 @@ public interface IOrdersService
     Task<List<OrderCountDto>> GetOrdersCountAsync();
 
     Task<List<OrderFlagDto>> GetOrderFlagsAsync();
+    Task<List<OrderFlagByTerritory>> GetOrderFlagsByTerritoryAsync();
 }

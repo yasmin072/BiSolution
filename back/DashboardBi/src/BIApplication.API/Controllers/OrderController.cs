@@ -26,6 +26,13 @@ public class OrderController : ControllerBase
         
         return Ok(result);
     }
+    [HttpGet("orderFlagByTerritory")]
+    public async Task<IActionResult> GetOrderFlagsByTerritoryAsync()
+    {
+        var result = await _ordersService.GetOrderFlagsByTerritoryAsync();
+        
+        return Ok(result);
+    }
 
 
 

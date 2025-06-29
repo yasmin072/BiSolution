@@ -6,6 +6,7 @@ public class OrdersMdxQueries
         SELECT  [Measures].[Sales Order ID Distinct Count] as [TotalOrder] 
                                   ON COLUMNS 
                                   FROM [CubeExamenFinal]";
+    
     public static string OrderFlagMdx = @"
                         SELECT 
                             [Measures].[Order Qty] ON COLUMNS,
@@ -13,17 +14,17 @@ public class OrdersMdxQueries
                         FROM [CubeExamenFinal]";
 
     public static string OrdersFlagByTerritoryY = @" 
-  SELECT
-  NON EMPTY {
-    ([Measures].[Sales Order ID Distinct Count], [Dim Date].[Year].[Year].Members),
-    ([Measures].[Sales Order ID Distinct Count], [Dim Date].[Year].[All])
-  } ON COLUMNS,
-  NON EMPTY
-    [Territory].[Name].[Name].Members *
-    FILTER(
-        [Dim Online Order Flag].[Online Order Flag ID].[Online Order Flag ID].Members,
-        NOT [Dim Online Order Flag].[Online Order Flag ID].CurrentMember IS [Dim Online Order Flag].[Online Order Flag ID].[Unknown]
-    )
-  ON ROWS
-FROM [CubeExamenFinal]";
+      SELECT
+      NON EMPTY {
+        ([Measures].[Sales Order ID Distinct Count], [Dim Date].[Year].[Year].Members),
+        ([Measures].[Sales Order ID Distinct Count], [Dim Date].[Year].[All])
+      } ON COLUMNS,
+      NON EMPTY
+        [Territory].[Name].[Name].Members *
+        FILTER(
+            [Dim Online Order Flag].[Online Order Flag ID].[Online Order Flag ID].Members,
+            NOT [Dim Online Order Flag].[Online Order Flag ID].CurrentMember IS [Dim Online Order Flag].[Online Order Flag ID].[Unknown]
+        )
+      ON ROWS
+    FROM [CubeExamenFinal]";
 }

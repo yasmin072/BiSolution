@@ -22,4 +22,16 @@ public class CubeController : ControllerBase
         var result = await globalAnalysisService.GetSalesByBikesAsync();
         return Ok(result);
     }
+    [HttpGet("totalDueByYear")]
+    public async Task<IActionResult> GetSalesByTotalDueByYearAsync()
+    {
+        var result = await globalAnalysisService.GetSalesByTotalDueByYearAsync();
+        return Ok(result);
+    }
+    [HttpGet("totalDueByMonth")]
+    public async Task<IActionResult> GetSalesByTotalDueByMonthAsync()
+    {
+        var result = await globalAnalysisService.GetSalesByTotalDueByMonthAsync();
+        return Ok(result);
+    }
 }

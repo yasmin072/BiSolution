@@ -35,7 +35,9 @@ public async Task<List<T>> ExecuteMdxQueryAsync<T>(string mdxQuery, Dictionary<s
                 Console.WriteLine($"Colonne {i}: {reader.GetName(i)}");
                 string columnName = reader.GetName(i);
                 foreach (var mapping in columnMappings)
+                    
                 {
+                    
                     if (mapping.Value == columnName && !reader.IsDBNull(i))
                     {
                         var prop = typeof(T).GetProperty(mapping.Key);

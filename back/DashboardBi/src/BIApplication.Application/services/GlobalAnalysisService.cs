@@ -26,6 +26,28 @@ public class GlobalAnalysisService : IGlobalAnalysisService
         return await _cubeRepository.ExecuteMdxQueryAsync<BikeCategProductsDto>(MdxQueries.GetSalesByBikesAsync, columnMappings);
     }
 
+    public async Task<List<TotalDueByYear>> GetSalesByTotalDueByYearAsync()
+    {
+        var columnMapping = new Dictionary<string, string>
+        {
+            { "year", "[Dim Date].[Year].[Year].[MEMBER_CAPTION]" },
+            { "TerritoryName", "[Territory].[Name].[Name].[MEMBER_CAPTION]" },
+            { "TotalDue", "[Measures].[Total Due]" }
+        };
+        return await _cubeRepository.ExecuteMdxQueryAsync<TotalDueByYear>(MdxQueries.totalDueYear, columnMapping);
+    }
+    public async Task<List<TotalDueByMonth>> GetSalesByTotalDueByMonthAsync()
+    {
+        var columnMapping = new Dictionary<string, string>
+        {
+            { "TerritoryName", "[Territory].[Name].[Name].[MEMBER_CAPTION]" },
+          
+        };
+        return await _cubeRepository.ExecuteMdxQueryAsync<TotalDueByMonth>(MdxQueries.totalDueMonth, columnMapping);
+    }
+    
+    
+
 
     // Exemple pour une autre requête
     /*public async Task<List<TotLineSubCatSalesReason>> GetTotLineSubCatSalesReasonAsync()

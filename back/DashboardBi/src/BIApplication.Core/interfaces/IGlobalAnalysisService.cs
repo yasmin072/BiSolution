@@ -7,5 +7,8 @@ public interface IGlobalAnalysisService
   //  public async Task<List<BikeCategProductsDto>> GetSalesByBikesAsync();
 
   Task<List<BikeCategProductsDto>> GetSalesByBikesAsync(); 
+  
+  Task<List<TotalDueByYear>> GetSalesByTotalDueByYearAsync();
+  Task<List<TotalDueByMonth>> GetSalesByTotalDueByMonthAsync();
   //Task<List>GetBikesAsync();
 }

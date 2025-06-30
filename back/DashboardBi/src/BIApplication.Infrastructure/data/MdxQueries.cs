@@ -10,4 +10,21 @@ public class MdxQueries
 	  [Product1].[Product Category ID].[All]
 	  )ON ROWS
       FROM  [CubeExamenFinal]";
+
+
+    public static string totalDueYear = @"
+        SELECT 
+      NON EMPTY 
+        [Dim Date].[Year].[Year].Members * {[Measures].[Total Due]} ON COLUMNS,
+      NON EMPTY 
+        [Territory].[Name].[Name].Members ON ROWS
+    FROM [CubeExamenFinal]";
+
+    public static string totalDueMonth = @"
+    SELECT 
+      NON EMPTY 
+        [Dim Date].[Month Name].[Month Name].Members * {[Measures].[Total Due]} ON COLUMNS,
+      NON EMPTY 
+        [Territory].[Name].[Name].Members ON ROWS
+    FROM [CubeExamenFinal]";
 }

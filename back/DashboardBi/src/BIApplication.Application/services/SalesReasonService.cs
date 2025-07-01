@@ -63,5 +63,18 @@ public class SalesReasonService : ISalesReasonService
             SalesReaonsMdxQueries.GetLineTotalByTerritoryAndReason, columnMappings);
         return results;
     }
+    public async Task<List<TotalLineBySalesReasonDto>> GetTotalLineBySalesReasonAsync()
+    {
+        var columnMappings = new Dictionary<string, string>
+        {
+            { "TotalLine", "[Measures].[Line Total]" },
+            { "SalesReasonName", "[Sales Reason].[Name].[Name].[MEMBER_CAPTION]" }
+        };
+        var results =    await _cubeRepository.ExecuteMdxQueryAsync<TotalLineBySalesReasonDto>(
+            SalesReaonsMdxQueries.GetTotalLineBySalesReason, columnMappings);
+        return results;
+    }
+    
+    
     
 }

@@ -37,4 +37,10 @@ public class SalesReaonsController : ControllerBase
         var result = await _salesReasonService.GetLineTotalByTerritoryAndReasonAsync();
         return Ok(result);
     }
+    [HttpGet("TotalLine")]
+    public async Task<IActionResult> GetTotalLineBySalesReasonAsync()
+    {
+        var result = await _salesReasonService.GetTotalLineBySalesReasonAsync();
+        return Ok(result);
+    }
 }

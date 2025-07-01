@@ -8,5 +8,6 @@ public interface ISalesReasonService
     Task<List<LineTotalBySubCategoryAndReasonDto>> GetLineTotalBySubCategoryAndReasonAsync();
     Task<List<LineTotalByProductAndReasonDto>> GetLineTotalByProductAndReasonAsync();
     Task<List<LineTotalByTerritoryAndReasonDto>> GetLineTotalByTerritoryAndReasonAsync();
+    Task<List<TotalLineBySalesReasonDto>> GetTotalLineBySalesReasonAsync();
 
 }

@@ -32,7 +32,7 @@ namespace BIApplication.Application.services
         {
             var columnMappings = new Dictionary<string, string>
             {
-                { "LineTotalSum", "[Measures].[Line Total - Sum]"},
+                { "totalLine", "[Measures].[Line Total - Sum]"},
                 { "TerritoryName", "[Territory].[Name].[Name].[MEMBER_CAPTION]" }
 
                 // Seulement la mesure, sans [Measures]. préfixe
@@ -41,6 +41,19 @@ namespace BIApplication.Application.services
             };
             return await _cubeRepository.ExecuteMdxQueryAsync<TotalVenteByTerritoryPlacedByCustomerDto>(
                 TerritoryMdxQueries.GetTotalventeByTerrPlacedByCustomerAsync, columnMappings);
+        }
+
+        public async Task<List<TotalLineByTerritoryDto>> GetTotalLineByTerritoryAsync()
+        {
+            var columnMappings = new Dictionary<string, string>
+            {
+                { "territoryName", "[Territory].[Name].[Name].[MEMBER_CAPTION]" },
+                { "totalLine", "[Measures].[Line Total]" }
+                
+
+            };
+            return await _cubeRepository.ExecuteMdxQueryAsync<TotalLineByTerritoryDto>(TerritoryMdxQueries.TotalLineByTerritory, columnMappings);
+
         }
 
         /*  public async Task<List<TotalVenteByTerritoryGroupDto>> GetTotalVenteByTerritoryGroupAsync()

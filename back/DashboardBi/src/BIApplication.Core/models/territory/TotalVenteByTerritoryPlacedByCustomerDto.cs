@@ -36,7 +36,7 @@ namespace BIApplication.Core.models.territory
       public string TerritoryName { get; set; }
 
       // Total global par territoire
-      public decimal LineTotalSum { get; set; }
+      public decimal totalLine { get; set; }
 
       public int PlacedByCustomer => 1; // Toujours à 1 car filtré dans MDX
   }

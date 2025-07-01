@@ -20,12 +20,21 @@ public class TerritoryMdxQueries
         FROM [CubeExamenFinal]
         WHERE [Dim Online Order Flag].[Online Order Flag ID].&[True]";
 
-
-  /*  public static string GetTotalVenteByTerritoryGroupAsync = @"
-        WITH 
-            MEMBER [Measures].[TerritoryGroupName] AS [Territory].[Group].CurrentMember.Name
+    public static string TotalLineByTerritory = @" 
         SELECT 
-            {[Measures].[TerritoryGroupName], [Measures].[Line Total - Sum]} ON COLUMNS,
-            NON EMPTY [Territory].[Group].[Group].Members ON ROWS
-        FROM [SalesCube]";*/
+            non empty 
+             {
+	        [Territory].[Name].[Name].Members
+	        } as [TerritoryName] on rows,
+            [Measures].[Line Total] as [LineTotal]on columns
+        FROM [CubeExamenFinal]";
+
+
+    /*  public static string GetTotalVenteByTerritoryGroupAsync = @"
+          WITH
+              MEMBER [Measures].[TerritoryGroupName] AS [Territory].[Group].CurrentMember.Name
+          SELECT
+              {[Measures].[TerritoryGroupName], [Measures].[Line Total - Sum]} ON COLUMNS,
+              NON EMPTY [Territory].[Group].[Group].Members ON ROWS
+          FROM [SalesCube]";*/
 }

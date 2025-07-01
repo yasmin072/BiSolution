@@ -8,10 +8,10 @@ public class OrdersMdxQueries
                                   FROM [CubeExamenFinal]";
     
     public static string OrderFlagMdx = @"
-                        SELECT 
-                            [Measures].[Order Qty] ON COLUMNS,
-                            NON EMPTY [Dim Online Order Flag].[Online Order Flag ID].[Online Order Flag ID].MEMBERS ON ROWS  
-                        FROM [CubeExamenFinal]";
+        SELECT 
+            [Measures].[Order Qty] ON COLUMNS,
+            NON EMPTY [Dim Online Order Flag].[Online Order Flag ID].[Online Order Flag ID].MEMBERS ON ROWS  
+        FROM [CubeExamenFinal]";
 
     public static string OrdersFlagByTerritoryY = @" 
       SELECT

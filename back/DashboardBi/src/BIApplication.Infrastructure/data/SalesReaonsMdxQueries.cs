@@ -50,7 +50,8 @@ public class SalesReaonsMdxQueries
           ) ON ROWS
       FROM [CubeExamenFinal]";
 
-    public static string GetLineTotalByTerritoryAndReason = @"SELECT 
+    public static string GetLineTotalByTerritoryAndReason = @"
+  SELECT 
         NON EMPTY {
           ([Measures].[Line Total], [Dim Date].[Year].[Year].Members),
           ([Measures].[Line Total], [Dim Date].[Year].[All])
@@ -64,5 +65,14 @@ public class SalesReaonsMdxQueries
            NOT [Sales Reason].[Name].CurrentMember  IS [Sales Reason].[Name].[Unknown]
           ) ON ROWS
       FROM [CubeExamenFinal]";
+
+    public static string GetTotalLineBySalesReason = @"
+      SELECT 
+              non empty 
+             {
+	         [Sales Reason].[Name].[Name].members
+	          }  on rows,
+              [Measures].[Line Total] as [LineTotal]on columns
+          FROM [CubeExamenFinal]";
 
 }

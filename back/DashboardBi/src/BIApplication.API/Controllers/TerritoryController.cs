@@ -33,22 +33,10 @@ namespace BIApplication.API.Controllers.Territories
             var result = await territoryService.GetTotalVenteByTerritoryGroupAsync();
             return Ok(result);
         }*/
-        [HttpGet("totalvente/onlineOrders")]
+        [HttpGet("totalvente-territoireCustomer")]
         public async Task<IActionResult> GetTotalVenteByTerrByCustomer()
         {
             var result = await territoryService.GetTotalventeByTerrPlacedByCustomerAsync();
-            return Ok(result);
-        }
-        [HttpGet("TotalLine")]
-        public async Task<IActionResult> GetTotalLineByTerritoryAsync()
-        {
-            var result = await territoryService.GetTotalLineByTerritoryAsync();
-            return Ok(result);
-        }
-        [HttpGet("sumTotalLine")]
-        public async Task<IActionResult> GetTotalSumParGroupe()
-        {
-            var result = await territoryService.GetTotalSumParGroupe();
             return Ok(result);
         }
 

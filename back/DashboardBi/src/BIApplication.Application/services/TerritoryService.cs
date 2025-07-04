@@ -55,6 +55,15 @@ namespace BIApplication.Application.services
             return await _cubeRepository.ExecuteMdxQueryAsync<TotalLineByTerritoryDto>(TerritoryMdxQueries.TotalLineByTerritory, columnMappings);
 
         }
+        public async Task<List<TotalLineSumParGroupe>> GetTotalSumParGroupe()
+        {
+            var columnMapping = new Dictionary<string, string>
+            {
+                { "TotalSum", "[Measures].[Line Total - Sum]" },
+                { "Groupe", "[Territory].[Name].[Name].[MEMBER_CAPTION]" }
+            };
+            return await _cubeRepository.ExecuteMdxQueryAsync<TotalLineSumParGroupe>(TerritoryMdxQueries.GetTotalSumParGroupeAsync, columnMapping);
+        }
 
         /*  public async Task<List<TotalVenteByTerritoryGroupDto>> GetTotalVenteByTerritoryGroupAsync()
           {

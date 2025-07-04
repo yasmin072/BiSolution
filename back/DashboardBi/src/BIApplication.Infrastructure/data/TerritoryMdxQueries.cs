@@ -29,6 +29,15 @@ public class TerritoryMdxQueries
             [Measures].[Line Total] as [LineTotal]on columns
         FROM [CubeExamenFinal]";
 
+    public static string GetTotalSumParGroupeAsync = @"
+            SELECT
+        [Measures].[Line Total - Sum] ON COLUMNS,
+        TopCount(
+            NonEmpty([Territory].[Name].[Name].MEMBERS),
+            4
+        ) ON ROWS
+    FROM [CubeExamenFinal]";
+
 
     /*  public static string GetTotalVenteByTerritoryGroupAsync = @"
           WITH

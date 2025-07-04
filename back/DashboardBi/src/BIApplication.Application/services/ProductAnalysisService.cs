@@ -9,11 +9,13 @@ public class ProductAnalysisService : IProductAnalysisService
 {
     private readonly ICubeRepository _cubeRepository;
 
-    public ProductAnalysisService(ICubeRepository cubeRepository)
+    public ProductAnalysisService( ICubeRepository cubeRepository)
     {
         _cubeRepository = cubeRepository;
+
     }
 
+    
     public async Task<List<TotalShippedProduct>> GetTotalShippedProducts()
     {
         var columnMappings = new Dictionary<string, string>
@@ -51,6 +53,20 @@ public class ProductAnalysisService : IProductAnalysisService
             { "ProductCount", "[Measures].[Product ID Distinct Count]" }
         };
         return await _cubeRepository.ExecuteMdxQueryAsync<ProductCountDto>(ProductMdxQueries.GetTotalProduct, columnMapping);
+    }
+    
+    public async Task<List<QtyOrderByYearMonth>> GetOrderQtyByProdCatByYearMonth()
+    {
+        var columnMapping = new Dictionary<string, string>
+        {
+            { "OrderQty", "[Measures].[Order Qty]" },
+            { "ProductCategoryID", "[Product1].[Product Category ID].[Product Category ID].[MEMBER_CAPTION]" },
+            { "Year", "[Dim Date].[HiérarchieDate].[Year].[MEMBER_CAPTION]" },
+            { "Month", "[Dim Date].[HiérarchieDate].[Month Name].[MEMBER_CAPTION]" }
+
+
+        };
+        return await _cubeRepository.ExecuteMdxQueryAsync<QtyOrderByYearMonth>(ProductMdxQueries.GetOrderQtyByProdCatByYearMonth, columnMapping);
     }
     
 }

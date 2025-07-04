@@ -45,6 +45,12 @@ namespace BIApplication.API.Controllers.Territories
             var result = await territoryService.GetTotalLineByTerritoryAsync();
             return Ok(result);
         }
+        [HttpGet("sumTotalLine")]
+        public async Task<IActionResult> GetTotalSumParGroupe()
+        {
+            var result = await territoryService.GetTotalSumParGroupe();
+            return Ok(result);
+        }
 
     }
 }

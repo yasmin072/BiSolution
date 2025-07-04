@@ -1,4 +1,5 @@
 using BIApplication.Core.interfaces;
+using BIApplication.Core.models.product;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BIApplication.API.Controllers;
@@ -38,6 +39,13 @@ public class ProductController : ControllerBase
     public async Task<IActionResult> GetProductCounts()
     {
         var result = await _productAnalysisService.GetProductCounts();
+        return Ok(result);
+    }
+    
+    [HttpGet("order-qty-by-year-month")]
+    public async Task<ActionResult<List<QtyOrderByYearMonth>>> GetQtyCommandeeByYearMonth()
+    {
+        var result = await _productAnalysisService.GetOrderQtyByProdCatByYearMonth();
         return Ok(result);
     }
 }

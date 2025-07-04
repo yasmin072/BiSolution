@@ -38,5 +38,20 @@ public class ProductMdxQueries
       SELECT  
        [Measures].[Product ID Distinct Count] as [nbProduct] ON COLUMNS
        FROM [CubeExamenFinal]";
+
+
+    public static string GetOrderQtyByProdCatByYearMonth = @"
+      SELECT
+        [Measures].[Order Qty]
+        ON COLUMNS,
+        NON EMPTY 
+        {
+           [Product1].[Product Category ID].[Product Category ID].Members
+        } * 
+        {
+          [Dim Date].[HiérarchieDate].[Year] ,
+	      [Dim Date].[HiérarchieDate].[Month Name]
+        } ON ROWS
+    FROM [CubeExamenFinal]";
 }
 

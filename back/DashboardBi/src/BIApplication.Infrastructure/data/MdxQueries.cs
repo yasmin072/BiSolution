@@ -27,4 +27,9 @@ public class MdxQueries
       NON EMPTY 
         [Territory].[Name].[Name].Members ON ROWS
     FROM [CubeExamenFinal]";
+    
+    public static string GetTotalClients = @"
+        select [Measures].[Customers] on columns 
+        from [CubeExamenFinal]";
+   
 }

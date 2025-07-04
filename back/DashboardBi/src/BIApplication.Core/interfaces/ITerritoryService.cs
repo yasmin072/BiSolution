@@ -13,6 +13,7 @@ namespace BIApplication.Core.interfaces
        Task<List<TerritoryCountDto>> GetTotalTerritoriesAsync();
         Task<List<TotalVenteByTerritoryPlacedByCustomerDto>> GetTotalventeByTerrPlacedByCustomerAsync();
         Task<List<TotalLineByTerritoryDto>> GetTotalLineByTerritoryAsync();
+        Task<List<TotalLineSumParGroupe>> GetTotalSumParGroupe();
 
         // Task<List<TotalVenteByTerritoryGroupDto>> GetTotalVenteByTerritoryGroupAsync(); // Nouvelle méthode
     }

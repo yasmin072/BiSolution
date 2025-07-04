@@ -46,6 +46,24 @@ public class GlobalAnalysisService : IGlobalAnalysisService
         return await _cubeRepository.ExecuteMdxQueryAsync<TotalDueByMonth>(MdxQueries.totalDueMonth, columnMapping);
     }
     
+    public async Task<List<TotalClients>> GetTotalClientsAsync()
+    {
+        var columnMappings = new Dictionary<string, string>
+        {
+            { "clientsNumber", "[Measures].[Customers]" }
+        };
+        return await _cubeRepository.ExecuteMdxQueryAsync<TotalClients>(MdxQueries.GetTotalClients, columnMappings);
+    }
+
+   /* public async Task<List<TotalOffres>> GetTotalOffresSpecialsAsync()
+    {
+        var columnMappings = new Dictionary<string, string>
+        {
+            { "TotalOffers", "[Measures].[Nbre de offres speciales]" }
+        };
+        return await _cubeRepository.ExecuteMdxQueryAsync<TotalOffres>(MdxQueries.GetTotalOffresSpecialsAsync, columnMappings);
+    }*/
+    
     
 
 

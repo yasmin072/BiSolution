@@ -15,6 +15,8 @@ builder.Services.AddScoped<IGlobalAnalysisService, GlobalAnalysisService>();
 builder.Services.AddScoped<IProductAnalysisService, ProductAnalysisService>();
 builder.Services.AddScoped<ITerritoryService,TerritoryService >();
 builder.Services.AddScoped<ISalesReasonService,SalesReasonService >();
+builder.Services.AddScoped<IOrdersService,OrderService >();
+builder.Services.AddScoped<IDynamicQueryService, DynamicQueryService>();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
